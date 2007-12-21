@@ -23,11 +23,11 @@ The pinger is largely parallelized, and consists of these logical steps:
 
 To perform these tasks, the pinger consists of these parts:
 
-  * Repository for IP ranges to be pinged: *IIPRangesRepository*
-  * Repository of lan machines, used for storing the ping results: *ILanHostsRepository*
-  * Managing class that starts and creates pinger tasks to the task scheduler: *IPinger*
-  * Task scheduler and/or thread pool that execute tasks: *ITaskExecutor*
-  * Class that performs the concrete ping: *PingTask*
+  * Repository for IP ranges to be pinged: IIPRangesRepository
+  * Repository of lan machines, used for storing the ping results: ILanHostsRepository
+  * Managing class that starts and creates pinger tasks to the task scheduler: IPinger
+  * Task scheduler and/or thread pool that execute tasks: ITaskExecutor
+  * Class that performs the concrete ping: PingTask
 
 = Details =
 
