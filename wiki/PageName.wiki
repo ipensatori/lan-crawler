@@ -5,13 +5,13 @@
 
 The lan-crawler project needs a simple pinger, it's implementation details are described here.
 
-== Overview ==
+= Overview =
 
-=== Goal ===
+== Goal ==
 
 The end result is to have a maximally up-to-date list of LAN machines that are currently online.
 
-=== Logical walkthrough ===
+== Logical walkthrough ==
 
 The pinger is largely parallelized, and consists of these logical steps:
 
@@ -32,13 +32,8 @@ To perform these tasks, the pinger consists of these parts:
   * Task scheduler and/or thread pool that execute tasks: *ITaskExecutor*
   * Class that performs the concrete ping: *PingTask*
 
-
-=== interface: IIPRangesRepository ===
-
-Presents a repository concept for a list of IPRanges. Used to save and access this list from a save location.
-
 {{{
-interface IIPRangesRepository : IList<IPRanges>
+interface IIPRangesRepository : IList
 {
     Save();
     Add(IPRange range);
